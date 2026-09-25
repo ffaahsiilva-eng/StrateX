@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="favPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="50%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="favAccent" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="60%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+    <linearGradient id="favHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.2" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#080C14" />
+  <g transform="translate(6, 6)">
+    <circle cx="26" cy="26" r="22" fill="#0284C7" fill-opacity="0.25" />
+    <path d="M 12 10 L 26 26 L 19 33 L 5 19 Z" fill="url(#favPrimary)" />
+    <path d="M 40 10 L 26 26 L 33 33 L 47 19 Z" fill="url(#favAccent)" />
+    <path d="M 26 26 L 12 42 L 5 33 L 19 19 Z" fill="#0C4A6E" opacity="0.9" />
+    <path d="M 26 26 L 40 42 L 47 33 L 33 19 Z" fill="url(#favPrimary)" />
+    <polygon points="26,14 36,26 26,38 16,26" fill="url(#favAccent)" />
+    <polygon points="26,14 32,23 26,26 20,23" fill="url(#favHighlight)" />
+    <circle cx="26" cy="26" r="2.5" fill="#FFFFFF" />
+  </g>
+</svg>
