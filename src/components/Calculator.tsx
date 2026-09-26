@@ -13,6 +13,7 @@ interface Addon {
 
 export const Calculator = () => {
   const [basePlan, setBasePlan] = useState<'simples' | 'mediano' | 'empresarial'>('mediano');
+  const [userCount, setUserCount] = useState(1);
   const [addons, setAddons] = useState<Addon[]>([
     {
       id: 'domain_setup',
@@ -57,19 +58,13 @@ export const Calculator = () => {
   const basePrices = {
     simples: 500,
     mediano: 1000,
-    empresarial: 1500,
-  };
-
-  const baseMonthly = {
-    simples: 0,
-    mediano: 0,
-    empresarial: 150,
+    empresarial: 2000,
   };
 
   const planNames = {
     simples: 'Site Simples (R$ 500)',
     mediano: 'Site Mediano (R$ 1.000)',
-    empresarial: 'Site Empresarial + Sistema (R$ 1.500)',
+    empresarial: 'Site Empresarial + Sistema (R$ 2.000)',
   };
 
   const toggleAddon = (id: string) => {
@@ -83,9 +78,11 @@ export const Calculator = () => {
   const finalOneTimePrice = basePrices[basePlan] + addonsTotal;
 
   // Monthly logic:
-  // For empresarial it's R$ 150. For others, optional monthly is R$ 80.
-  let calculatedMonthly = baseMonthly[basePlan];
-  if (basePlan !== 'empresarial' && includeOptionalMonthly) {
+  // For empresarial it's R$ 150/mês por usuário. For others, optional monthly is R$ 80.
+  let calculatedMonthly = 0;
+  if (basePlan === 'empresarial') {
+    calculatedMonthly = userCount * 150;
+  } else if (includeOptionalMonthly) {
     calculatedMonthly = 80;
   }
 
@@ -95,8 +92,13 @@ export const Calculator = () => {
       `*Olá StrateX! Montei uma simulação de projeto no site:*`,
       ``,
       `📌 *Plano Base:* ${planNames[basePlan]}`,
-      `🔧 *Recursos Adicionais Escolhidos:*`,
     ];
+
+    if (basePlan === 'empresarial') {
+      lines.push(`👥 *Usuários no Sistema:* ${userCount} (${userCount === 1 ? '1 usuário' : `${userCount} usuários`})`);
+    }
+
+    lines.push(`🔧 *Recursos Adicionais Escolhidos:*`);
 
     if (selectedAddons.length > 0) {
       selectedAddons.forEach((a) => {
@@ -109,10 +111,12 @@ export const Calculator = () => {
     lines.push(``);
     lines.push(`💰 *Investimento Inicial:* R$ ${finalOneTimePrice.toLocaleString('pt-BR')}`);
 
-    if (calculatedMonthly > 0) {
-      lines.push(`🔄 *Mensalidade (Suporte/Cloud):* R$ ${calculatedMonthly}/mês`);
+    if (basePlan === 'empresarial') {
+      lines.push(`🔄 *Mensalidade (Cloud/Suporte):* R$ 150/mês por usuário (Total: R$ ${calculatedMonthly}/mês para ${userCount} ${userCount === 1 ? 'usuário' : 'usuários'})`);
+    } else if (calculatedMonthly > 0) {
+      lines.push(`🔄 *Mensalidade (Suporte Opcional):* R$ ${calculatedMonthly}/mês`);
     } else {
-      lines.push(`🔄 *Mensalidade:* Sem mensalidade`);
+      lines.push(`🔄 *Mensalidade:* Sem mensalidade obrigatória`);
     }
 
     lines.push(``);
@@ -201,9 +205,9 @@ export const Calculator = () => {
                   <div className="font-bold text-sm text-slate-900 dark:text-white">Empresarial</div>
                   <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Sistema + Dashboard</div>
                   <div className="font-display text-xl font-extrabold text-cyan-700 dark:text-cyan-400 mt-2 tabular-nums">
-                    R$ 1.500
+                    R$ 2.000
                   </div>
-                  <div className="text-[11px] text-slate-500 mt-0.5 font-medium">+ mensalidade R$150</div>
+                  <div className="text-[11px] text-slate-500 mt-0.5 font-medium">a partir de R$ 150/mês por usuário</div>
                 </button>
               </div>
             </div>
@@ -248,8 +252,46 @@ export const Calculator = () => {
               </div>
             </div>
 
-            {/* Step 3: Optional Monthly Care (for Simples & Mediano) */}
-            {basePlan !== 'empresarial' && (
+            {/* Step 3: User quantity for Empresarial OR Optional Monthly Care (for Simples & Mediano) */}
+            {basePlan === 'empresarial' ? (
+              <div className="rounded-2xl border border-cyan-500/40 dark:border-cyan-800/60 bg-cyan-50/30 dark:bg-[#0B1528] p-5 shadow-xs">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div>
+                    <div className="text-xs font-bold text-cyan-800 dark:text-cyan-400 uppercase tracking-wider mb-1">
+                      3. Mensalidade por Usuário
+                    </div>
+                    <div className="text-sm font-bold text-slate-900 dark:text-white">
+                      Quantos usuários terão acesso ao sistema?
+                    </div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                      R$ 150/mês por usuário ativo (inclui servidores dedicados, banco em nuvem, backups e suporte).
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-1.5 shrink-0 self-start sm:self-auto shadow-xs">
+                    <button
+                      type="button"
+                      onClick={() => setUserCount((prev) => Math.max(1, prev - 1))}
+                      disabled={userCount <= 1}
+                      className="w-7 h-7 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold hover:bg-slate-200 dark:hover:bg-slate-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors text-base"
+                      aria-label="Diminuir quantidade de usuários"
+                    >
+                      -
+                    </button>
+                    <span className="font-display text-base font-bold text-slate-900 dark:text-white min-w-[28px] text-center tabular-nums">
+                      {userCount}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setUserCount((prev) => prev + 1)}
+                      className="w-7 h-7 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-base"
+                      aria-label="Aumentar quantidade de usuários"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ) : (
               <div className="rounded-2xl border border-slate-200/90 dark:border-slate-800 bg-slate-50/60 dark:bg-[#0C1222] p-5 shadow-xs">
                 <div
                   onClick={() => setIncludeOptionalMonthly(!includeOptionalMonthly)}
@@ -338,7 +380,7 @@ export const Calculator = () => {
                   </div>
                   <div className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
                     {basePlan === 'empresarial'
-                      ? 'Cobre servidores dedicados, banco em nuvem, backup diário e suporte.'
+                      ? `R$ 150/mês por usuário (${userCount} ${userCount === 1 ? 'usuário' : 'usuários'}). Cobre servidores dedicados, banco em nuvem, backup diário e suporte.`
                       : calculatedMonthly > 0
                       ? 'Suporte contínuo e atualizações mensais.'
                       : 'Hospedagem por sua conta ou configurada separadamente.'}

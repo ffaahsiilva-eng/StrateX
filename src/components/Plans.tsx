@@ -133,7 +133,7 @@ export const Plans = () => {
               </h3>
               <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
                 Nos planos de <strong>R$ 500</strong> e <strong>R$ 1.000</strong> você <strong>NÃO</strong> paga nenhuma mensalidade obrigatória (taxa única).
-                No plano de <strong>R$ 1.500</strong>, por envolver banco de dados com autenticação, servidores dedicados e backups, oferecemos a mensalidade a partir de <strong>R$ 150/mês</strong> que cobre servidor veloz, certificado SSL, manutenção corretiva e suporte direto no WhatsApp.
+                No plano de <strong>R$ 2.000</strong>, por envolver banco de dados com autenticação, servidores dedicados e backups, oferecemos a mensalidade a partir de <strong>R$ 150/mês por usuário</strong> que cobre servidor veloz, certificado SSL, manutenção corretiva e suporte direto no WhatsApp.
               </p>
             </div>
             <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-3 justify-center">
@@ -171,7 +171,7 @@ export const Plans = () => {
                   <th className="px-6 py-4">Recurso / Benefício</th>
                   <th className="px-6 py-4 text-center">Simples (R$ 500)</th>
                   <th className="px-6 py-4 text-center text-cyan-800 dark:text-cyan-400 font-bold">Mediano (R$ 1.000)</th>
-                  <th className="px-6 py-4 text-center">Empresarial (R$ 1.500)</th>
+                  <th className="px-6 py-4 text-center">Empresarial (R$ 2.000)</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 dark:divide-slate-800/80">
@@ -209,7 +209,7 @@ export const Plans = () => {
                   <td className="px-6 py-3.5 font-medium text-slate-900 dark:text-white">Mensalidade</td>
                   <td className="px-6 py-3.5 text-center text-xs text-emerald-700 dark:text-emerald-400 font-bold">R$ 0 (Sem mensalidade)</td>
                   <td className="px-6 py-3.5 text-center text-xs text-emerald-700 dark:text-emerald-400 font-bold">R$ 0 (Sem mensalidade)</td>
-                  <td className="px-6 py-3.5 text-center text-xs text-cyan-800 dark:text-cyan-300 font-bold">A partir de R$ 150/mês</td>
+                  <td className="px-6 py-3.5 text-center text-xs text-cyan-800 dark:text-cyan-300 font-bold">A partir de R$ 150/mês por usuário</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-3.5 font-medium text-slate-900 dark:text-white">Prazo de Entrega</td>

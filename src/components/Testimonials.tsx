@@ -233,7 +233,7 @@ export const Testimonials = () => {
                     >
                       <option value="Site Simples (R$ 500)">Site Simples (R$ 500)</option>
                       <option value="Site Mediano (R$ 1.000)">Site Mediano (R$ 1.000)</option>
-                      <option value="Site Empresarial + Sistema (R$ 1.500)">Site Empresarial + Sistema (R$ 1.500)</option>
+                      <option value="Site Empresarial + Sistema (R$ 2.000)">Site Empresarial + Sistema (R$ 2.000)</option>
                     </select>
                   </div>
 

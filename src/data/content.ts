@@ -60,13 +60,13 @@ export const PLANS: Plan[] = [
     id: 'empresarial',
     name: 'Site Empresarial + Sistema',
     tagline: 'Plataforma web sob medida com painel administrativo e automações.',
-    price: 'R$ 1.500',
-    priceValue: 1500,
-    period: '+ mensalidade a partir de R$ 150/mês',
+    price: 'R$ 2.000',
+    priceValue: 2000,
+    period: '+ mensalidade a partir de R$ 150/mês por usuário',
     highlight: false,
     idealFor: 'Empresas que precisam de Gestão, Área de Membros, Controle de Pedidos e Automação',
     deliveryTime: '15 a 25 dias úteis',
-    monthlyNote: 'Mensalidade inclui: hospedagem cloud de alta velocidade, banco de dados seguro, backups diários, suporte técnico contínuo e atualizações.',
+    monthlyNote: 'Mensalidade a partir de R$ 150/mês por usuário: inclui hospedagem cloud de alta velocidade, banco de dados seguro, backups diários, suporte técnico contínuo e atualizações.',
     features: [
       'Sistema Web completo sob medida (Frontend + Backend + Banco de Dados)',
       'Painel Administrativo exclusivo (Dashboard com gráficos e relatórios)',
@@ -77,8 +77,8 @@ export const PLANS: Plan[] = [
       'Infraestrutura cloud escalável com certificado SSL incluso',
       'Manutenção técnica contínua, backups diários e monitoramento 24/7 na mensalidade',
     ],
-    ctaText: 'Contratar Site Empresarial (R$ 1.500)',
-    whatsappMessage: 'Olá! Tenho interesse no Plano Empresarial (R$ 1.500 + mensalidade) da StrateX para criar um sistema sob medida.',
+    ctaText: 'Contratar Site Empresarial (R$ 2.000)',
+    whatsappMessage: 'Olá! Tenho interesse no Plano Empresarial (R$ 2.000 + mensalidade a partir de R$ 150/mês por usuário) da StrateX para criar um sistema sob medida.',
   },
 ];
 
@@ -114,8 +114,8 @@ export const TESTIMONIALS: Testimonial[] = [
     company: 'TechAuto Peças & Mecânica',
     city: 'Manaus - AM',
     rating: 5,
-    comment: 'O plano empresarial de R$ 1.500 com a mensalidade de suporte foi a melhor decisão técnica que tomamos. O sistema web de controle de ordens de serviço e o painel administrativo poupam horas da nossa equipe todo dia.',
-    planUsed: 'Site Empresarial + Sistema (R$ 1.500)',
+    comment: 'O plano empresarial de R$ 2.000 com a mensalidade por usuário de suporte foi a melhor decisão técnica que tomamos. O sistema web de controle de ordens de serviço e o painel administrativo poupam horas da nossa equipe todo dia.',
+    planUsed: 'Site Empresarial + Sistema (R$ 2.000)',
     result: 'Redução de 4h diárias em processos manuais de atendimento',
     date: 'Março 2026',
   },
@@ -151,7 +151,7 @@ export const TESTIMONIALS: Testimonial[] = [
     city: 'Curitiba - PR',
     rating: 5,
     comment: 'O sistema empresarial com catálogo de imóveis e integração de leads mudou nosso patamar. A mensalidade vale cada centavo pelo suporte rápido e servidores sempre online com backup.',
-    planUsed: 'Site Empresarial + Sistema (R$ 1.500)',
+    planUsed: 'Site Empresarial + Sistema (R$ 2.000)',
     result: '100% de disponibilidade e gestão centralizada de 300+ imóveis',
     date: 'Fevereiro 2026',
   },
@@ -206,7 +206,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     id: 'gestor-pro',
     title: 'GestorPro Automação',
     category: 'empresarial',
-    categoryLabel: 'Plano Empresarial - R$ 1.500',
+    categoryLabel: 'Plano Empresarial - R$ 2.000',
     client: 'Sistemas & Gestão Empresarial',
     description: 'Sistema web completo com dashboard administrativo, cadastro de clientes, controle financeiro e emissão de comprovantes com Pix.',
     metrics: 'Economia de 4h diárias',
@@ -250,12 +250,12 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
 
 export const FAQS: FAQItem[] = [
   {
-    question: 'Como funciona a mensalidade no Plano Empresarial de R$ 1.500?',
-    answer: 'Nos planos Simples (R$ 500) e Mediano (R$ 1.000), o pagamento é ÚNICO, ou seja, você não tem mensalidade obrigatória para a StrateX. No Plano Empresarial (R$ 1.500), por se tratar de um sistema complexo (com banco de dados na nuvem, logins, automações e servidores dedicados), há uma mensalidade a partir de R$ 150/mês. Ela cobre a infraestrutura cloud de alta disponibilidade, backups diários de segurança, correções preventivas e suporte contínuo via WhatsApp.',
+    question: 'Como funciona a mensalidade no Plano Empresarial de R$ 2.000?',
+    answer: 'Nos planos Simples (R$ 500) e Mediano (R$ 1.000), o pagamento é ÚNICO, ou seja, você não tem mensalidade obrigatória para a StrateX. No Plano Empresarial (R$ 2.000), por se tratar de um sistema complexo (com banco de dados na nuvem, logins, automações e servidores dedicados), há uma mensalidade a partir de R$ 150/mês por usuário. Ela cobre a infraestrutura cloud de alta disponibilidade, backups diários de segurança, correções preventivas e suporte contínuo via WhatsApp.',
   },
   {
     question: 'Qual é o prazo de entrega para cada plano?',
-    answer: 'Para o Site Simples (R$ 500), a entrega ocorre entre 3 a 5 dias úteis. Para o Site Mediano (R$ 1.000), entre 7 a 10 dias úteis. Para o Site Empresarial com sistema web (R$ 1.500 + mensalidade), o prazo padrão é de 15 a 25 dias úteis, com entregas de protótipos para você acompanhar cada etapa.',
+    answer: 'Para o Site Simples (R$ 500), a entrega ocorre entre 3 a 5 dias úteis. Para o Site Mediano (R$ 1.000), entre 7 a 10 dias úteis. Para o Site Empresarial com sistema web (R$ 2.000 + mensalidade), o prazo padrão é de 15 a 25 dias úteis, com entregas de protótipos para você acompanhar cada etapa.',
   },
   {
     question: 'Vocês me ajudam a registrar o domínio (ex: www.minhaempresa.com.br) e colocar no ar?',
@@ -294,6 +294,6 @@ export const DIFFERENTIALS = [
   {
     number: '04',
     title: 'Preço Justo e Sem Surpresas',
-    description: 'Valores claros e transparentes desde o primeiro minuto: R$ 500 para sites simples, R$ 1.000 para sites medianos e R$ 1.500 para sistemas empresariais.',
+    description: 'Valores claros e transparentes desde o primeiro minuto: R$ 500 para sites simples, R$ 1.000 para sites medianos e R$ 2.000 para sistemas empresariais.',
   },
 ];

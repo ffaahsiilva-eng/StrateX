@@ -81,7 +81,7 @@ export const Footer = () => {
               <li>
                 <a href="#planos" className="hover:text-cyan-700 dark:hover:text-cyan-400 transition-colors flex justify-between pr-4">
                   <span>Site Empresarial</span>
-                  <strong className="text-slate-900 dark:text-white tabular-nums">R$ 1.500</strong>
+                  <strong className="text-slate-900 dark:text-white tabular-nums">R$ 2.000</strong>
                 </a>
               </li>
             </ul>

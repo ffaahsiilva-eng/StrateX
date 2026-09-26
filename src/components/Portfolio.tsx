@@ -73,7 +73,7 @@ export const Portfolio = () => {
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white'
               }`}
             >
-              Empresarial (R$ 1.500)
+              Empresarial (R$ 2.000)
             </button>
           </div>
         </div>

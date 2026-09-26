@@ -80,11 +80,11 @@ export const Hero = () => {
                     <span className="text-xs font-bold text-slate-800 dark:text-slate-300">Empresarial</span>
                     <span className="text-[10px] uppercase font-mono font-bold text-emerald-800 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/60 px-1.5 py-0.5 rounded">Sistema</span>
                   </div>
-                  <div className="my-1.5 font-display text-2xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight tabular-nums">
-                    R$ 1.500
+                  <div className="my-1.5 font-display text-2xl sm:text-2xl lg:text-3xl font-extrabold text-slate-950 dark:text-white tracking-tight tabular-nums">
+                    R$ 2.000
                   </div>
                   <div className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
-                    + mensalidade suporte
+                    + a partir de R$ 150/mês por usuário
                   </div>
                 </div>
               </div>
@@ -161,7 +161,7 @@ export const Hero = () => {
                   <span className="text-slate-200">[</span>
                   <span className="text-cyan-300">&quot;Simples R$500&quot;</span>,{' '}
                   <span className="text-cyan-300">&quot;Mediano R$1.000&quot;</span>,{' '}
-                  <span className="text-cyan-300">&quot;Empresarial R$1.500&quot;</span>
+                  <span className="text-cyan-300">&quot;Empresarial R$2.000&quot;</span>
                   <span className="text-slate-200">]</span>,
                 </div>
                 <div className="pl-4">

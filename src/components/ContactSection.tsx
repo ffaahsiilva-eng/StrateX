@@ -147,7 +147,7 @@ export const ContactSection = () => {
                   >
                     <option value="Site Simples (R$ 500)">Site Simples — R$ 500 (Landing Page rápida)</option>
                     <option value="Site Mediano (R$ 1.000)">Site Mediano — R$ 1.000 (Até 5 páginas / SEO)</option>
-                    <option value="Site Empresarial + Sistema (R$ 1.500)">Site Empresarial + Sistema — R$ 1.500 + mensalidade</option>
+                    <option value="Site Empresarial + Sistema (R$ 2.000)">Site Empresarial + Sistema — R$ 2.000 + mensalidade (a partir de R$ 150/mês por usuário)</option>
                     <option value="Ainda não tenho certeza / Preciso de orientação">Ainda não tenho certeza / Preciso de orientação</option>
                   </select>
                 </div>

@@ -30,7 +30,7 @@ export default function App() {
           {/* Services & Capabilities Bento Grid */}
           <Services />
 
-          {/* The 3 Core Plans: Simples (R$500), Mediano (R$1.000), Empresarial (R$1.500 + mensalidade) */}
+          {/* The 3 Core Plans: Simples (R$500), Mediano (R$1.000), Empresarial (R$2.000 + mensalidade) */}
           <Plans />
 
           {/* Interactive Custom Budget Calculator */}

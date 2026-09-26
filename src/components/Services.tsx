@@ -91,7 +91,7 @@ export const Services = () => {
             <div>
               <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 mb-4">
                 <span className="font-mono text-cyan-700 dark:text-cyan-400 font-bold text-xs sm:text-sm">03. Sistemas Web & Dashboards</span>
-                <span className="font-bold text-slate-900 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">R$ 1.500</span>
+                <span className="font-bold text-slate-900 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">R$ 2.000</span>
               </div>
               <h3 className="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-3">
                 Gestão automatizada e painel interno com login
@@ -116,7 +116,7 @@ export const Services = () => {
                 href="#planos"
                 className="text-xs font-bold text-cyan-700 dark:text-cyan-400 hover:text-cyan-800 dark:hover:text-cyan-300 inline-flex items-center gap-1"
               >
-                <span>Ver Plano R$ 1.500</span>
+                <span>Ver Plano R$ 2.000</span>
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </a>
             </div>
