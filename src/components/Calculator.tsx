@@ -165,7 +165,7 @@ export const Calculator = () => {
                 >
                   <div className="font-bold text-sm text-slate-900 dark:text-white">Site Simples</div>
                   <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Landing Page</div>
-                  <div className="font-display text-xl font-extrabold text-cyan-700 dark:text-cyan-400 mt-2 tabular-nums">
+                  <div className="font-display text-xl font-extrabold text-cyan-700 dark:text-cyan-400 mt-2 tabular-nums whitespace-nowrap">
                     R$ 500
                   </div>
                   <div className="text-[11px] text-slate-500 mt-0.5 font-medium">Pagamento único</div>
@@ -186,7 +186,7 @@ export const Calculator = () => {
                     <span className="text-[9px] bg-cyan-100 dark:bg-cyan-500/20 text-cyan-800 dark:text-cyan-300 px-1.5 py-0.5 rounded font-mono font-bold">Popular</span>
                   </div>
                   <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Até 5 páginas / SEO</div>
-                  <div className="font-display text-xl font-extrabold text-cyan-700 dark:text-cyan-400 mt-2 tabular-nums">
+                  <div className="font-display text-xl font-extrabold text-cyan-700 dark:text-cyan-400 mt-2 tabular-nums whitespace-nowrap">
                     R$ 1.000
                   </div>
                   <div className="text-[11px] text-slate-500 mt-0.5 font-medium">Pagamento único</div>
@@ -204,7 +204,7 @@ export const Calculator = () => {
                 >
                   <div className="font-bold text-sm text-slate-900 dark:text-white">Empresarial</div>
                   <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Sistema + Dashboard</div>
-                  <div className="font-display text-xl font-extrabold text-cyan-700 dark:text-cyan-400 mt-2 tabular-nums">
+                  <div className="font-display text-xl font-extrabold text-cyan-700 dark:text-cyan-400 mt-2 tabular-nums whitespace-nowrap">
                     R$ 2.000
                   </div>
                   <div className="text-[11px] text-slate-500 mt-0.5 font-medium">a partir de R$ 150/mês por usuário</div>

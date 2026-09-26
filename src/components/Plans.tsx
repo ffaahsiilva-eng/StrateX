@@ -57,13 +57,22 @@ export const Plans = () => {
                     {plan.tagline}
                   </p>
 
-                  <div className="mt-5 flex items-baseline gap-2">
-                    <span className="font-display text-4xl sm:text-5xl font-extrabold text-slate-950 dark:text-white tracking-tight tabular-nums">
-                      {plan.price}
-                    </span>
-                    <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-                      {plan.period}
-                    </span>
+                  <div className="mt-5 min-h-[82px] flex flex-col justify-end">
+                    <div className="flex items-baseline gap-2 flex-wrap">
+                      <span className="font-display text-4xl sm:text-5xl font-extrabold text-slate-950 dark:text-white tracking-tight tabular-nums whitespace-nowrap">
+                        {plan.price}
+                      </span>
+                      {plan.id !== 'empresarial' && (
+                        <span className="text-xs text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap">
+                          {plan.period}
+                        </span>
+                      )}
+                    </div>
+                    {plan.id === 'empresarial' && (
+                      <div className="mt-1.5 text-xs text-cyan-700 dark:text-cyan-400 font-semibold leading-snug">
+                        {plan.period}
+                      </div>
+                    )}
                   </div>
 
                   <div className="mt-3 flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400">
